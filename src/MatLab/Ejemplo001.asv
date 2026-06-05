@@ -14,17 +14,9 @@ path_bd = [path_bd(1:id_d(end-1)), 'data', d, 'textures', d];
 
 ext_img = '.tiff';
 
-dp = [0; 1];
-ndp = size(dp, 2);
-
 fl_img = dir([path_bd, '*', ext_img]);
 
 imgG = imread([path_bd, fl_img(1).name]);
 
 [n, m] = size(imgG);
-imgG_d = double(imgG);
-
-figure(1);
-imshow(imgG);
-
 
