@@ -18,14 +18,12 @@ imgSi = imgS(indT);
 imgDi = imgD(indT);
 nP = size(indT,1);
 
-[imgTi1, imgTi2, imgTi3, imgTi4, imgTi5, imgTi6, imgTi7, imgTi8, imgTi9] = ...
-    arrayfun(@(i1) imgC(imgSi(i1,:), imgDi(i1,:), N), 1:nP);
+[imgTi1, imgTi2] = arrayfun(@(i1) imgC(imgSi(i1,:), imgDi(i1,:), N), 1:nP);
 imgT = zeros(L-w(1)+1, K-w(2)+1, 9);
-t_img = (L-w(1)+1)*(K-w(2)+1);
 
-for i1=1:9
+for i1=1:2
     eval(sprintf('imgTi = imgTi%d;', i1));
-    imgT(((i1-1)*(t_img)+1):i1*t_img) = imgTi(:);
+    imgT
 end
 %{
 imgT1 = zeros(L-w(1)+1, K-w(2)+1);

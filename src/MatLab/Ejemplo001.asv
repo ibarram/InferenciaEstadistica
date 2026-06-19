@@ -22,7 +22,7 @@ nw = size(w, 2);
 
 fl_img = dir([path_bd, '*', ext_img]);
 
-imgG = imread([path_bd, fl_img(44).name]);
+imgG = imread([path_bd, fl_img(1).name]);
 
 [n, m] = size(imgG);
 imgS1 = cell(1, ndp);
